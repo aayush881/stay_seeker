@@ -1,0 +1,66 @@
+<%- include ('../partials/header'); -%>
+
+
+        
+         <div class="container special">
+             <div class="head"><p>WELCOME TO STAY SEEKER!</p>
+                <div class="ft"><p>Hand-picked rentals and homestays from all over the world</p></div></div>
+             
+             <p>
+                <a class="btn button_slide1 slide_right" href="/campgrounds/new">Add New Homestay</a>
+             </p>
+             <p> 
+                <form action="/campgrounds" method="GET" class="form-inline">
+                    <div class="form-group">
+                        <input type="text" name="search" placeholder="Homestay search..." class="form-control">
+                        <input type="submit" value="Search" class="btn button_slide2 slide_right">
+                    </div>
+                </form>
+            </p>
+         </div>
+        
+<div class ="container">
+     <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <div class="col-md-12">
+            <% if(noMatch !== null) { %>
+            <h3><%= noMatch %></h3>
+            <% } %>
+        </div>
+        <% campgrounds.forEach(function(campground){ %>
+            <div class="col-md-4 col-sm-6">
+                <div class="thumbnail">
+                   <img class="imgs" src="<%= campground.image %>">
+                    <div class="caption">
+                        <h5><%= campground.name %></h5>
+                        <% if (campground.rating === 0) { %>
+                        <em>No reviews yet.</em>
+                        <% } else { %>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star <% if (campground.rating > 1.5) { %> checked <% } %>"></span>
+                        <span class="fa fa-star <% if (campground.rating > 2.5) { %> checked <% } %>"></span>
+                        <span class="fa fa-star <% if (campground.rating > 3.5) { %> checked <% } %>"></span>
+                        <span class="fa fa-star <% if (campground.rating > 4.5) { %> checked <% } %>"></span>
+                        <% } %>
+                    </div>
+                   <p>
+                       <a href="/campgrounds/<%= campground._id %>" class="btn button_slide slide_right">More Info</a>
+                   </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+<footer id="footer" class="footer navbar-expand-md justify-content-center">
+    <div class="footer-copyright text-center py-3">
+        <p class="mb-0 mt-0"><a id="footer-campground-name" style="color: #124EC1" href="/">StaySeeker</a> ©2022</p>
+        <p class="mb-0 mt-0">                
+                <strong style="font-size: 1.5vw">
+                    <span style="color: #124EC1">Created By:</span>
+                    <span style="color: green ">Aayush Nevatia
+                    </span>
+                </strong>
+            </a>
+        </p>
+    </div>
+</footer>
+<%- include ('../partials/footer'); -%>
