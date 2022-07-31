@@ -11,9 +11,9 @@ html{
     font-size: calc(0.7em + 0.7vw);
 }
 body{   
-    font-family: 'DM Sans', sans-serif;
-    background-image: linear-gradient(25deg, #040f0f 0%, #031d1c 100%);
-    background-repeat: no-repeat;
+    font-family: 'sans-serif','monospace';
+    background-image: url("https://images.pexels.com/photos/176851/pexels-photo-176851.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+ 
     background-attachment: fixed;
     padding-top: 70px;
     padding-bottom: 40px;
@@ -63,7 +63,7 @@ body{
     font-size: 0.8em;
     padding: 0;
     margin-bottom: 10px;
-    background-color: rgb(31, 118, 199);
+    background-color: rgb(177, 193, 207);
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -87,7 +87,7 @@ body{
     font-size: 0.8em;
     letter-spacing: 1px;
     cursor: pointer;
-    box-shadow: inset 0 0 0 0 #D80286;
+    box-shadow: inset 0 0 0 0 #f7badf;
     -webkit-transition: ease-out 0.4s;
     -moz-transition: ease-out 0.4s;
     transition: ease-out 0.4s;
@@ -103,7 +103,7 @@ body{
     font-size: 0.8em;
     letter-spacing: 1px;
     cursor: pointer;
-    box-shadow: inset 0 0 0 0 #D80286;
+    box-shadow: inset 0 0 0 0 #e984c2;
     -webkit-transition: ease-out 0.4s;
     -moz-transition: ease-out 0.4s;
     transition: ease-out 0.4s;
@@ -119,13 +119,13 @@ body{
     font-size: 0.8em;
     letter-spacing: 1px;
     cursor: pointer;
-    box-shadow: inset 0 0 0 0 #D80286;
+    box-shadow: inset 0 0 0 0 #f1b4da;
     -webkit-transition: ease-out 0.4s;
     -moz-transition: ease-out 0.4s;
     transition: ease-out 0.4s;
   }
   .slide_right:hover {
-    box-shadow: inset 400px 0 0 0 #166ef1;
+    box-shadow: inset 400px 0 0 0 #6aa1f3;
   }
 
   @media screen and (max-width: 800px) {
@@ -147,7 +147,7 @@ body{
     display: inline;
 }
 .checked {
-    color: orange;
+    color: rgb(238, 178, 67);
 } 	
 .footer{
     font-family: 'DM Sans', sans-serif;

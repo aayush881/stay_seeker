@@ -1,15 +1,6 @@
 <%- include ('../partials/header'); -%>
-<div class="container">
-    <div class="row">
-        <div class="col-md-2">
-            
-            <div class="list-group">
-                <p></p>
-                <li class="list-group-item active">Info 1</li>
-                <li class="list-group-item">Info 2</li>
-                <li class="list-group-item">Info 3</li>
-            </div>
-        </div>
+<div class="container flex items-center">
+    <div class="row flex items-center">
         <div class="col-md-10">
             <div class="thumbnail">
                 <img class="img-responsive" src="<%= campground.image %>">
@@ -46,13 +37,13 @@
                     <p>
                         Current homestay rating: <strong><%= campground.rating.toFixed(2) %></strong>
                     </p>
-                    <p><h4>Latest reviews for this homestay:</h4></p>
+                    <p><h6>Latest reviews for this homestay:</h6></p>
                     <hr style="margin-top: 0;">
                     <% campground.reviews.slice(0, 5).forEach(function(review){ %>
                     <div class="row">
                         <div class="col-md-3">
                             <%- '<span class="fa fa-star checked"></span>'.repeat(review.rating) %><%- '<span class="fa fa-star"></span>'.repeat(5 - review.rating) %>
-                            <div>Review by: <strong><%= review.author.username %></strong></div>
+                            <div>Review by: <%= review.author.username %></div>
                             <span><em><%= review.updatedAt.toDateString() %></em></span>
                         </div>
                         <div class="col-md-9">
@@ -71,7 +62,7 @@
                     <hr>
                     <% }); %>
                     <div style="margin-bottom: 10px;">
-                        <h4><a href="/campgrounds/<%= campground._id %>/reviews"><i class="fa fa-search" aria-hidden="true"></i> See all reviews</a></h4>
+                        <h5><a href="/campgrounds/<%= campground._id %>/reviews"><i class="fa fa-search" aria-hidden="true"></i> See all reviews</a></h5>
                     </div>
                     <% } %>
                     <div>
